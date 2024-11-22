@@ -1,0 +1,62 @@
+.live-market {
+    width: 692px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .heading {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 31.5px;
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 20px;
+  }
+  
+  .pair {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #9e9e9e;
+    margin-right: 20px;
+  }
+  
+  .change {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    margin-right: 20px;
+  }
+  
+  .price {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    margin-right: 20px;
+  }
+  
+  .graph {
+    width: 162px;
+    height: 40px;
+  }
+  

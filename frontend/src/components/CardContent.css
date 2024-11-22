@@ -1,0 +1,55 @@
+.card-content {
+    width: 252px;
+    height: 205px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 32px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .icon img {
+    width: 52px;
+    height: 52px;
+  }
+  
+  .info {
+    margin-top: 24px;
+  }
+  
+  .amount {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    color: #1a1a1a;
+  }
+  
+  .description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #9e9e9e;
+  }
+  
+  .change {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .change img {
+    margin-right: 5px;
+  }
+  
+  .change span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22.45px;
+    color: #1ecb4f;
+  }
+  
