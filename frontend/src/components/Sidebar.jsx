@@ -1,41 +1,47 @@
 import React from 'react';
 import './Sidebar.css';
-
+import Logo from '../images/Logo.png'
+import { TbLogout2 } from "react-icons/tb";
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoMailOutline } from "react-icons/io5";
+import { LuWallet } from "react-icons/lu";
+import { IoCardOutline } from "react-icons/io5";
+import { IoGridOutline } from "react-icons/io5";
+import { IoPieChartOutline } from "react-icons/io5";
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="logo">
-        <img src="https://placeholder.pics/svg/36x20" alt="logo" />
+        <img src= { Logo } alt="logo" />
         <span>CryptX</span>
       </div>
       <div className="menu">
-        <div className="menu-item active">
-          <img src="https://placeholder.pics/svg/24x24" alt="overview-icon" />
+        <div className="menu-item">
+        <IoGridOutline />
           <span>Overview</span>
-          <div className="active-dot"></div>
         </div>
         <div className="menu-item">
-          <img src="https://placeholder.pics/svg/24x24" alt="chart-icon" />
+        <IoPieChartOutline />
           <span>Chart</span>
         </div>
         <div className="menu-item">
-          <img src="https://placeholder.pics/svg/24x24" alt="transactions-icon" />
+        <IoCardOutline />
           <span>Transactions</span>
         </div>
         <div className="menu-item">
-          <img src="https://placeholder.pics/svg/24x24" alt="wallet-icon" />
+        <LuWallet />
           <span>Wallet</span>
         </div>
         <div className="menu-item">
-          <img src="https://placeholder.pics/svg/24x24" alt="mailbox-icon" />
+        <IoMailOutline />
           <span>Mail Box</span>
         </div>
         <div className="menu-item">
-          <img src="https://placeholder.pics/svg/24x24" alt="setting-icon" />
+        <IoSettingsOutline />
           <span>Setting</span>
         </div>
         <div className="menu-item">
-          <img src="https://placeholder.pics/svg/24x24" alt="logout-icon" />
+        <TbLogout2 />
           <span>Logout</span>
         </div>
       </div>
