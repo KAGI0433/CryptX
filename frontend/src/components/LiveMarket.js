@@ -1,5 +1,9 @@
 import React from 'react';
 import './LiveMarket.css';
+import Ethereumicon from '../images/ethereumicon.png'
+import Bitcoinicon from '../images/bitcoin-icon.png'
+import Litecoinicon from '../images/litecoinicon.png'
+import Cardinoicon from '../images/cardinoicon.png'
 
 const LiveMarket = () => {
   const data = [
@@ -10,7 +14,7 @@ const LiveMarket = () => {
       price: '39,786 USD',
       changeColor: '#1ecb4f',
       graph: 'https://placeholder.pics/svg/162x40',
-      icon: 'https://placeholder.pics/svg/50x50',
+      icon: Ethereumicon ,
     },
     {
       name: 'Bitcoin',
@@ -19,7 +23,7 @@ const LiveMarket = () => {
       price: '21,786 USD',
       changeColor: '#1ecb4f',
       graph: 'https://placeholder.pics/svg/162x40',
-      icon: 'https://placeholder.pics/svg/50x50',
+      icon: Bitcoinicon,
     },
     {
       name: 'Litecoin',
@@ -28,7 +32,7 @@ const LiveMarket = () => {
       price: '9,786 USD',
       changeColor: '#ff8d4d',
       graph: 'https://placeholder.pics/svg/162x40',
-      icon: 'https://placeholder.pics/svg/50x50',
+      icon: Litecoinicon,
     },
     {
       name: 'Cardano',
@@ -37,7 +41,7 @@ const LiveMarket = () => {
       price: '4,786 USD',
       changeColor: '#1ecb4f',
       graph: 'https://placeholder.pics/svg/162x40',
-      icon: 'https://placeholder.pics/svg/50x50',
+      icon: Cardinoicon,
     },
   ];
 

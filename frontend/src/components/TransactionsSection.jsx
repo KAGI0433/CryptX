@@ -1,5 +1,7 @@
 import React from 'react';
 import './Transactions.css';
+import Eth from '../images/eth.png'
+import Bit from '../images/bit.png'
 
 const Transactions = () => {
   const transactions = [
@@ -8,28 +10,28 @@ const Transactions = () => {
       action: 'Received',
       amount: '$24,102',
       time: 'Today, 19:30',
-      icon: 'https://placeholder.pics/svg/40x40',
+      icon: Eth,
     },
     {
       name: 'Bitcoin',
       action: 'Buy',
       amount: '$4,157',
       time: 'Today, 14:32',
-      icon: 'https://placeholder.pics/svg/40x40',
+      icon: Bit,
     },
     {
       name: 'Bitcoin',
       action: 'Buy',
       amount: '$64,784',
       time: 'Today, 13:50',
-      icon: 'https://placeholder.pics/svg/40x40',
+      icon: Bit,
     },
     {
       name: 'Litecoin',
       action: 'Buy',
       amount: '$14,265',
       time: 'Today, 09:38',
-      icon: 'https://placeholder.pics/svg/40x40',
+      icon: Bit,
     },
   ];
 

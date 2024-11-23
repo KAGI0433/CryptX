@@ -1,62 +1,86 @@
+/* Container Styling */
 .live-market {
-    width: 692px;
-    padding: 20px;
-    background-color: #1a1a1a;
-    border-radius: 8px;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .heading {
-    font-weight: 600;
-    font-size: 21px;
-    line-height: 31.5px;
-    margin-bottom: 20px;
-  }
-  
-  .row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .icon {
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
-  }
-  
-  .name {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    margin-right: 20px;
-  }
-  
-  .pair {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: #9e9e9e;
-    margin-right: 20px;
-  }
-  
-  .change {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
-    margin-right: 20px;
-  }
-  
-  .price {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 21px;
-    margin-right: 20px;
-  }
-  
-  .graph {
-    width: 162px;
-    height: 40px;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Heading Styling */
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+/* Row Styling */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+/* Icon Styling */
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Name Styling */
+.name {
+  flex: 1;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* Pair Styling */
+.pair {
+  flex: 1;
+  color: #777777;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Change Styling */
+.change {
+  flex: 1;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Price and Graph Box Styling */
+.price {
+  display: flex;
+  flex-direction: column; /* Stack price and graph vertically */
+  align-items: flex-end; /* Align content to the right */
+  padding: 10px;
+  border: 1px solid #e0e0e0; /* Box border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background */
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 5px; /* Space between price and graph */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.graph {
+  width: 120px;
+  height: 30px;
+  object-fit: cover; /* Ensures consistent sizing */
+}

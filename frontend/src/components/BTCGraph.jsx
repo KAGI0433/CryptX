@@ -13,7 +13,7 @@ const Statistic = () => {
           <div>$200</div>
           <div>0</div>
         </div>
-        <img src="https://placeholder.pics/svg/428x106" alt="graph" className="graph" />
+       
         <div className="tooltip">
           <div className="tooltip-dot"></div>
           <div className="tooltip-rectangle"></div>

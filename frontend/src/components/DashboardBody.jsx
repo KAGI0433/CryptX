@@ -5,6 +5,9 @@ import TransactionsSection from './TransactionsSection';
 import Header from './Header';
 import LiveMarket from './LiveMarket';
 import CardContent from './CardContent';
+import Card from './card';
+import CardContent3 from './CardContent3';
+import CardContent4 from './CardContent4';
 
 const DashboardBody = () => {
   return (
@@ -35,9 +38,9 @@ const DashboardBody = () => {
             }}
           >
             <CardContent title="Bitcoin - BTC" value="$40,291" change="+0.25%" />
-            <CardContent title="Ethereum - ETH" value="$18,291" change="+0.25%" />
-            <CardContent title="Litecoin - ITL" value="$8,291" change="+0.25%" />
-            <CardContent title="Cardano - ADA" value="$3,291" change="-2.05%" />
+            <Card title="Ethereum - ETH" value="$18,291" change="+0.25%" />
+            <CardContent3 title="Litecoin - ITL" value="$8,291" change="+0.25%" />
+            <CardContent4 title="Cardano - ADA" value="$3,291" change="-2.05%" />
           </div>
 
           {/* BTC Graph Section */}
