@@ -1,7 +1,7 @@
 import React from 'react';
 import './Transactions.css';
-import Eth from '../images/eth.png'
-import Bit from '../images/bit.png'
+import Eth from '../images/eth.png';
+import Bit from '../images/bit.png';
 
 const Transactions = () => {
   const transactions = [
@@ -45,8 +45,10 @@ const Transactions = () => {
             <div className="name">{transaction.name}</div>
             <div className="action">{transaction.action}</div>
           </div>
-          <div className="amount">{transaction.amount}</div>
-          <div className="time">{transaction.time}</div>
+          <div className="amount-time-wrapper">
+            <div className="amount">{transaction.amount}</div>
+            <div className="time">{transaction.time}</div>
+          </div>
         </div>
       ))}
     </div>
@@ -54,3 +56,4 @@ const Transactions = () => {
 };
 
 export default Transactions;
+
