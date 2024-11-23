@@ -52,4 +52,20 @@
     line-height: 22.45px;
     color: #1ecb4f;
   }
+
+  .chance {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
   
+  .chance img {
+    margin-right: 5px;
+  }
+  .chance span{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22.45px;
+    color: #ffa726;
+  }

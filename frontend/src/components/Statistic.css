@@ -1,93 +1,138 @@
+/* Parent Container */
+.parent-container {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 20px; 
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Live Market Styles */
+.live-market {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 31.5px;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+}
+
+.name,
+.pair,
+.change,
+.price {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.change {
+  font-weight: bold;
+}
+
+/* Statistic Styles */
 .statistic {
-    width: 534px;
-    height: 442px;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 30px 33px;
-    box-sizing: border-box;
-  }
-  
-  .heading {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 31.5px;
-    color: #1a1a1a;
-    margin-bottom: 30px;
-  }
-  
-  .chart {
-    position: relative;
-  }
-  
-  .amounts {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: #9e9e9e;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 274px;
-  }
-  
-  .graph {
-    position: absolute;
-    top: 94px;
-    left: 83px;
-  }
-  
-  .tooltip {
-    position: absolute;
-    top: 176px;
-    left: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .tooltip-dot {
-    width: 10px;
-    height: 10px;
-    background-color: #6154f0;
-    border-radius: 50%;
-    margin-bottom: 14px;
-  }
-  
-  .tooltip-rectangle {
-    width: 81px;
-    height: 32px;
-    background-color: #6154f0;
-    border-radius: 4px;
-    position: relative;
-    top: -17px;
-  }
-  
-  .tooltip-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-    color: #fff;
-    position: relative;
-    top: -49px;
-  }
-  
-  .months {
-    position: absolute;
-    bottom: 0;
-    left: 83px;
-    width: 424px;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    color: #9e9e9e;
-  }
+  width: 534px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px 33px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 15px;
+}
+
+.chart {
+  position: relative;
+}
+
+.amounts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #9e9e9e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 274px;
+}
+
+.tooltip {
+  position: absolute;
+  top: 176px;
+  left: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tooltip-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #6154f0;
+  border-radius: 50%;
+  margin-bottom: 14px;
+}
+
+.tooltip-rectangle {
+  width: 81px;
+  height: 32px;
+  background-color: #6154f0;
+  border-radius: 4px;
+  position: relative;
+  top: -17px;
+}
+
+.tooltip-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #fff;
+  position: relative;
+  top: -49px;
+}
+
+.months {
+  position: absolute;
+  bottom: 0;
+  left: 83px;
+  width: 424px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #9e9e9e;
+}
+
   
