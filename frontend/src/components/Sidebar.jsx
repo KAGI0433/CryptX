@@ -1,47 +1,53 @@
 import React from 'react';
 import './Sidebar.css';
-import Logo from '../images/Logo.png'
+import { useNavigate, NavLink } from 'react-router-dom';
+import Logo from '../images/Logo.png';
 import { TbLogout2 } from "react-icons/tb";
-import { IoSettingsOutline } from "react-icons/io5";
-import { IoMailOutline } from "react-icons/io5";
+import { IoSettingsOutline, IoMailOutline, IoCardOutline, IoGridOutline, IoPieChartOutline } from "react-icons/io5";
 import { LuWallet } from "react-icons/lu";
-import { IoCardOutline } from "react-icons/io5";
-import { IoGridOutline } from "react-icons/io5";
-import { IoPieChartOutline } from "react-icons/io5";
+
 const Sidebar = () => {
+  const navigate = useNavigate();
+
+  // Logout Function
+  const handleLogout = () => {
+    localStorage.removeItem('token'); // Assuming JWT token is stored in localStorage
+    navigate('/login'); // Redirect to login page
+  };
+
   return (
     <div className="sidebar">
       <div className="logo">
-        <img src= { Logo } alt="logo" />
+        <img src={Logo} alt="logo" />
         <span>CryptX</span>
       </div>
       <div className="menu">
-        <div className="menu-item">
-        <IoGridOutline />
+        <NavLink to="/overview" className="menu-item" activeClassName="active">
+          <IoGridOutline />
           <span>Overview</span>
-        </div>
-        <div className="menu-item">
-        <IoPieChartOutline />
+        </NavLink>
+        <NavLink to="/chart" className="menu-item" activeClassName="active">
+          <IoPieChartOutline />
           <span>Chart</span>
-        </div>
-        <div className="menu-item">
-        <IoCardOutline />
+        </NavLink>
+        <NavLink to="/transactions" className="menu-item" activeClassName="active">
+          <IoCardOutline />
           <span>Transactions</span>
-        </div>
-        <div className="menu-item">
-        <LuWallet />
+        </NavLink>
+        <NavLink to="/wallet" className="menu-item" activeClassName="active">
+          <LuWallet />
           <span>Wallet</span>
-        </div>
-        <div className="menu-item">
-        <IoMailOutline />
+        </NavLink>
+        <NavLink to="/mailbox" className="menu-item" activeClassName="active">
+          <IoMailOutline />
           <span>Mail Box</span>
-        </div>
-        <div className="menu-item">
-        <IoSettingsOutline />
+        </NavLink>
+        <NavLink to="/settings" className="menu-item" activeClassName="active">
+          <IoSettingsOutline />
           <span>Setting</span>
-        </div>
-        <div className="menu-item">
-        <TbLogout2 />
+        </NavLink>
+        <div className="menu-item logout" onClick={handleLogout}>
+          <TbLogout2 />
           <span>Logout</span>
         </div>
       </div>

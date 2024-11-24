@@ -1,13 +1,8 @@
-// backend/routes/authRoutes.js
 const express = require('express');
-const { registerUser, loginUser } = require('../controllers/authController');
-
 const router = express.Router();
+const { login } = require('../controllers/authcontroller');
 
-// Route for user registration
-router.post('/register', registerUser);
+router.post('/login', login);
 
-// Route for user login
-router.post('/login', loginUser);
+module.exports = router;
 
-module.exports = router; // Export the router object

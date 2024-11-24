@@ -1,0 +1,34 @@
+.overview {
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .stat-item {
+    background: #1e1e2e;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .stat-item h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .graph-section {
+    margin-top: 30px;
+  }
+  
+  .graph-section h2 {
+    margin-bottom: 20px;
+  }
+  
