@@ -31,4 +31,163 @@
   .graph-section h2 {
     margin-bottom: 20px;
   }
-  
+  .transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.transactions-table th,
+.transactions-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.transactions-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.transactions-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.transactions-table td {
+    color: #333;
+}
+
+.wallet-info {
+  margin-bottom: 20px;
+}
+
+.wallet-info h2 {
+  margin-bottom: 10px;
+}
+
+.wallet-info button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wallet-info button:hover {
+  background-color: #0056b3;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.transactions-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.transactions-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.transactions-table td {
+  color: #333;
+}
+
+.mailbox-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.mail-list {
+  width: 40%;
+  margin-right: 20px;
+}
+
+.mail-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mail-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.mail-list li:hover {
+  background-color: #f4f4f4;
+}
+
+.mail-list .unread {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.message-details {
+  width: 60%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.message-details h3 {
+  margin-top: 0;
+}
+
+.message-details p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.settings-section {
+  margin-bottom: 30px;
+}
+
+.settings-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.settings-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.settings-section input[type="text"],
+.settings-section input[type="email"],
+.settings-section input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.settings-section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.settings-section button:hover {
+  background-color: #0056b3;
+}
+
+.settings-section input[type="checkbox"] {
+  margin-right: 10px;
+}
