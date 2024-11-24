@@ -1,58 +1,95 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { register } from '../utils/api';
+import axios from 'axios';
+import './register.css';
+
 
 const Register = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Basic validation for empty fields
+    if (!username || !email || !password || !confirmPassword) {
+      setError('All fields are required!');
+      return;
+    }
+
+    // Check if passwords match
+    if (password !== confirmPassword) {
+      setError('Passwords do not match!');
+      return;
+    }
+
     try {
-      await register({ username, email, password });
-      navigate('/login'); // Redirect to login on success
+      const response = await axios.post('/api/register', { username, email, password });
+      // On success, redirect to the login page or show success message
+      if (response.data.success) {
+        window.location.href = '/login'; // Redirect to login page
+      } else {
+        setError('Registration failed. Please try again.');
+      }
     } catch (err) {
-      setError(err.response?.data?.message || 'Registration failed');
+      setError('Error registering user. Please try again.');
     }
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: '50px auto' }}>
-      <h2>Register</h2>
+    <div className="register-container">
+      <h2>Create an Account</h2>
       <form onSubmit={handleSubmit}>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        <div>
-          <label>Username</label>
+        {error && <p className="error-message">{error}</p>}
+        <div className="form-group">
+          <label htmlFor="username">Username</label>
           <input
             type="text"
+            id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            required
+            placeholder="Enter your username"
           />
         </div>
-        <div>
-          <label>Email</label>
+
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
           <input
             type="email"
+            id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
+            placeholder="Enter your email"
           />
         </div>
-        <div>
-          <label>Password</label>
+
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
           <input
             type="password"
+            id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
+            placeholder="Enter your password"
           />
         </div>
+
+        <div className="form-group">
+          <label htmlFor="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="Confirm your password"
+          />
+        </div>
+
         <button type="submit">Register</button>
       </form>
+
       <p>
         Already have an account? <a href="/login">Login here</a>
       </p>
@@ -61,3 +98,4 @@ const Register = () => {
 };
 
 export default Register;
+

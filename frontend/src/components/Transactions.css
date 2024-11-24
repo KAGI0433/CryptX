@@ -20,7 +20,7 @@
 /* Transaction Row */
 .transaction-row {
   display: flex;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start; 
   margin-bottom: 20px;
   justify-content: space-between;
 }
@@ -56,9 +56,9 @@
 /* Amount-Time Wrapper */
 .amount-time-wrapper {
   display: flex;
-  flex-direction: column; /* Stack vertically */
-  align-items: flex-end; /* Align content to the right */
-  margin-left: auto; /* Align to the right */
+  flex-direction: column; 
+  align-items: flex-end; 
+  margin-left: auto; 
 }
 
 /* Amount Styling */
@@ -75,6 +75,6 @@
   font-size: 14px;
   line-height: 21px;
   color: #9e9e9e;
-  margin-top: 4px; /* Space between amount and time */
-  text-align: right; /* Right-align the time */
+  margin-top: 4px; 
+  text-align: right; 
 }
