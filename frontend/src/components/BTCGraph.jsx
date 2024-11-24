@@ -1,4 +1,3 @@
-// src/components/BTCGraph.jsx
 import React, { useEffect, useState } from 'react';
 import './Statistic.css';
 import { Line } from 'react-chartjs-2';
@@ -36,14 +35,37 @@ const BTCGraph = () => {
     return <div>Loading...</div>; // Show loading message while the data is being fetched
   }
 
-  const prices = btcData.prices.map((price) => price[1]);
-  const labels = btcData.prices.map((price) => new Date(price[0]).toLocaleDateString());
+  const rawPrices = btcData.prices.map((price) => price[1]);
+  const maxPrice = Math.max(...rawPrices);
+  const minPrice = Math.min(...rawPrices);
+
+  // Normalize prices to fit within the range of 0 to 800
+  const normalizedPrices = rawPrices.map((price) =>
+    ((price - minPrice) / (maxPrice - minPrice)) * 800
+  );
+
+  const rawLabels = btcData.prices.map((price) => new Date(price[0]));
+
+  // Filter data to show only the first day of each month
+  const filteredData = rawLabels.reduce(
+    (acc, date, index) => {
+      if (date.getDate() === 1) {
+        acc.labels.push(
+          date.toLocaleDateString('en-US', { month: 'short' })
+        );
+        acc.prices.push(normalizedPrices[index]);
+      }
+      return acc;
+    },
+    { labels: [], prices: [] }
+  );
 
   const data = {
-    labels: labels,
+    labels: filteredData.labels,
     datasets: [
       {
-        data: prices,
+        label: 'BTC Price',
+        data: filteredData.prices,
         borderColor: '#2196f3',
         backgroundColor: 'rgba(76, 175, 80, 0.2)',
         tension: 0.3,
@@ -63,7 +85,13 @@ const BTCGraph = () => {
       tooltip: {
         callbacks: {
           label: function (tooltipItem) {
-            return '$' + tooltipItem.raw.toLocaleString(); // Format the tooltip data with a dollar sign
+            // Recalculate original price from normalized value
+            const originalPrice =
+              (tooltipItem.raw / 800) * (maxPrice - minPrice) + minPrice;
+            return `$${originalPrice.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}`;
           },
         },
       },
@@ -72,19 +100,25 @@ const BTCGraph = () => {
       x: {
         title: {
           display: true,
-          text: 'Date',
+          
         },
       },
       y: {
         title: {
           display: true,
-          text: 'Price (USD)',
+          
         },
         ticks: {
-          beginAtZero: false,
-          stepSize: 5000,
-          min: 0,
-          max: Math.max(...prices) + 5000, // Dynamic max value based on the data
+          callback: function (value) {
+            const allowedTicks = [800, 600, 400, 200, 0];
+            if (allowedTicks.includes(value)) {
+              return `$${value}`;
+            }
+            return null; // Hide other ticks
+          },
+          stepSize: 200, // Step size for guidance
+          min: 0, // Minimum value on the y-axis
+          max: 800, // Maximum value on the y-axis
         },
       },
     },
@@ -92,7 +126,7 @@ const BTCGraph = () => {
 
   return (
     <div className="statistic">
-      <div className="heading">BTC Prices (Last 6 Months)</div>
+      <div className="heading">BTC Prices</div>
       <div className="chart-container">
         <Line data={data} options={options} height={300} />
       </div>
@@ -101,6 +135,11 @@ const BTCGraph = () => {
 };
 
 export default BTCGraph;
+
+
+
+
+
 
 
 
