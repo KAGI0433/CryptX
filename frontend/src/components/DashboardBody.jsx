@@ -1,7 +1,7 @@
 // src/components/DashboardBody.jsx
 import React from 'react';
 import Sidebar from './Sidebar';
-import BTCGraph from './BTCGraph'; // Use updated BTCGraph
+import BTCGraph from './BTCGraph'; 
 import TransactionsSection from './TransactionsSection';
 import Header from './Header';
 import LiveMarket from './LiveMarket';

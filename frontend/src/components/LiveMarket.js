@@ -54,7 +54,7 @@ const LiveMarket = () => {
       {marketData.map((item, index) => {
         // Determine the change color (green for positive, red for negative)
         const changeColor = item.price_change_percentage_24h >= 0 ? '#1ecb4f' : '#ff8d4d';
-        const graphImage = [One, Two, Three, Four][index]; // Using pre-defined images for each crypto
+        const graphImage = [One, Two, Three, Four][index]; 
 
         return (
           <div className="row" key={index}>

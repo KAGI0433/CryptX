@@ -23,12 +23,31 @@ body {
     border: 1px solid black; 
     border-radius: 8px;
     overflow: hidden;
-    width: 300px;
+    width: 100%; 
+    max-width: 500px; 
   }
+
+  .search-input {
+    padding: 20px; 
+    border: none; 
+    outline: none;
+    font-size: 18px; 
+    background-color: white; 
+    color: black;
+    margin: 4px; 
+  }
+  
+  .search-input::placeholder {
+    color: black; 
+    opacity: 1; 
+    
+  }
+  
   
   /* Search Button */
 .search-button {
   background-color: transparent;
+  color:black;
   border: none;
   padding: 8px;
   cursor: pointer;
@@ -45,28 +64,17 @@ body {
   gap: 16px;
 }
 
-.icon {
+.icon, .icons > * {
   cursor: pointer;
+  font-size: 24px; 
 }
 
 /* Profile Section */
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
-
-.profile-pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 .profile-info {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+  align-items: flex-start; 
+  width: 100%; 
 }
 
 .profile-name {
@@ -78,10 +86,17 @@ body {
 .profile-username {
   font-size: 12px;
   color: #777;
+  margin-top: 4px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
 
 .arrow-icon {
-  width: 24px;
-  height: 24px;
-  color:black;
+  margin-left: auto; 
+  color: black; 
 }

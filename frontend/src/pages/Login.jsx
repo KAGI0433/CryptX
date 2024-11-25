@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { GoogleLogin } from '@react-oauth/google'; // Import Google OAuth component
-import './login.css'; // Import the CSS file for styling
-import Logo from '../images/Logo.png' // Import your logo
+import { GoogleLogin } from '@react-oauth/google'; 
+import './login.css'; 
+
 
 
 
@@ -15,7 +15,7 @@ function Login() {
   const handleLogin = () => {
     if (username === 'user' && password === 'password') {
       localStorage.setItem('authToken', 'my-auth-token');
-      localStorage.setItem('username', username); // Store username in localStorage
+      localStorage.setItem('username', username); 
       navigate('/dashboard');
     } else {
       alert('Invalid credentials');
@@ -27,7 +27,7 @@ function Login() {
     if (response.credential) {
       const token = response.credential;
       localStorage.setItem('authToken', token);
-      localStorage.setItem('username', 'GoogleUser'); // Store a placeholder or actual user info from Google
+      localStorage.setItem('username', 'GoogleUser'); 
       navigate('/dashboard');
     } else {
       alert('Google login failed');
@@ -40,7 +40,7 @@ function Login() {
 
       {/* Logo centered with animation */}
       <div className="logo-container">
-        <img src={ Logo } alt="Logo" className="logo" />
+      <div className="logo-text">CryptX</div>
       </div>
 
       <div className="email-container">

@@ -23,7 +23,8 @@ const SearchBar = () => {
         <div className="profile-info">
           <span className="profile-name">Laurice</span>
           <span className="profile-username">@laurice22</span>
-          <FaAngleDown />
+          <div> <FaAngleDown className="arrow-icon" /></div>
+         
         </div>
       </div>
     </div>
